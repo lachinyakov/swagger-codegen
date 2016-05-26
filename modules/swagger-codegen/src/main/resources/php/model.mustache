@@ -123,10 +123,10 @@ class {{classname}} {{#parentSchema}}extends {{{parent}}} {{/parentSchema}}imple
      */
     public function {{getter}}AllowableValues()
     {
-        return [
+        return array(
             {{#allowableValues}}{{#enumVars}}self::{{datatypeWithEnum}}_{{{name}}},{{^-last}}
             {{/-last}}{{/enumVars}}{{/allowableValues}}
-        ];
+        );
     }
     {{/isEnum}}{{/vars}}
 
